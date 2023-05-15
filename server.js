@@ -8,7 +8,10 @@ const sequelize = require('./config/connection');
 app.use(controllers);
 
 
-app.listen(PORT, () => {
-    console.log('Hey Guys')
+sequelize.sync({force: false}).then(() => {
+    app.listen(PORT, () => {
+        console.log(`node server listening on ${PORT}`);
+    })
 });
 
+//note
