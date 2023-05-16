@@ -8,6 +8,6 @@
     "tailwindcss": "^3.3.2"
   },
   "scripts": {
-    "build-css": "tailwindcss build style.css -i public/css/style.css -o public/css/style.css"
+    "build-css": "tailwindcss build style.css -i public/css/tailwind.css -o public/css/style.css"
   }
 }
