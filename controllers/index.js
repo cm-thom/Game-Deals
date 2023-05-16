@@ -3,9 +3,8 @@ const search = require('./search');
 
 //do not need to include . when adding folder routes
 router.use("/search", search);
+const users = require('./users');
 
-router.get('/', (req, res) => {
-    res.render('homepage', {});
-});
+router.use("/users", users);
 
 module.exports = router;
