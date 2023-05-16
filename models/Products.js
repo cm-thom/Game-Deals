@@ -46,3 +46,5 @@ Products.init({
 
 //add foreign key for primary key user_id
 //figure out image storage
+
+module.exports = Products;
