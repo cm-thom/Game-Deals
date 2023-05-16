@@ -5,13 +5,14 @@ const app = express();
 const controllers = require('./controllers')
 const sequelize = require('./config/connection');
 
-app.use(controllers);
 
+
+const models = require('./models');
+
+app.use(controllers);
 
 sequelize.sync({force: false}).then(() => {
     app.listen(PORT, () => {
         console.log(`node server listening on ${PORT}`);
     })
 });
-
-//note
