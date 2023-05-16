@@ -4,7 +4,7 @@ const controllers = require('./controllers')
 const sequelize = require('./config/connection');
 const exphbs = require('express-handlebars');
 
-const PORT = 3001;
+const PORT = process.env.PORT  || 3001;
 const app = express();
 
 //needed so express can find public (front-end) assets
