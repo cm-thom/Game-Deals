@@ -24,7 +24,7 @@ Products.init({
         allowNull: false,
     },
     description: {
-        type: DataTypes.STRING, //isn't there big string or something
+        type: DataTypes.STRING, //isn't there big string or something? maybe varchar(255) is enough
     },
     viewCount: {
         type: DataTypes.INTEGER,
