@@ -24,7 +24,7 @@ Products.init({
         allowNull: false,
     },
     description: {
-        type: DataTypes.STRING, //isn't there big string or something
+        type: DataTypes.STRING, //isn't there big string or something? maybe varchar(255) is enough
     },
     viewCount: {
         type: DataTypes.INTEGER,
@@ -46,3 +46,5 @@ Products.init({
 
 //add foreign key for primary key user_id
 //figure out image storage
+
+module.exports = Products;
