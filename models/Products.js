@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes , Sequelize} = require('sequelize');
 
 const sequelize = require ('../config/connection');
 
@@ -45,6 +45,5 @@ Products.init({
 });
 
 //add foreign key for primary key user_id
-//figure out image storage
-
+//figure out image storage 
 module.exports = Products;
