@@ -13,5 +13,3 @@ router.use("/users", users);
 
 router.use("/products", products);
 module.exports = router;
-
-
