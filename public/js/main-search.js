@@ -5,13 +5,11 @@
  async function submitSearch() {
     const userSearchInput = document.querySelector('#search-navbar').value.trim();
 
-    //  if (userSearchInput) {
-    //      await fetch(`/search/${userSearchInput}`)
-    //      .then(res => res.json())
-    //      .then(data => {
-    //         console.log(data);
-    //      })
-    // }
+    if (userSearchInput == "") {
+        alert("Search must be filled out");
+        return false;
+    };
+
     window.location.replace('/search/' + userSearchInput);
 };
 
