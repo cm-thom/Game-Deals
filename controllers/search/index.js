@@ -44,7 +44,7 @@ router.get('/:userQuery', async (req, res) => {
         product.get({ plain: true })
         );
       console.log(results);
-
+      
       res.render('search', results[0]);
   
     } catch (error) {
