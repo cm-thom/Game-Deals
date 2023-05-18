@@ -11,7 +11,7 @@ const productAvalible = document.querySelector('.Avalible').value
 
 
 
-
+//
 
 const newProduct =  fetch(`/products/new-product`, {
     method: 'POST',
