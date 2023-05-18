@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
 
 
 router.get('/:userQuery', async (req, res) => {
+
     try {
       const userQuery = req.params.userQuery;
   
@@ -20,14 +21,17 @@ router.get('/:userQuery', async (req, res) => {
         }
       });
   
-      res.json(products); 
+      const results = products.map((product) =>
+        product.get({ plain: true })
+        );
+      console.log(results);
+
+      res.render('search', {results});
   
     } catch (error) {
       console.log(error);
       res.status(500).json({ msg: 'Internal server error' });
     }
-
-    //res.render('search', {});
   });
 
 
@@ -38,9 +42,6 @@ router.get('/:userQuery', async (req, res) => {
 //     await Products.findAll({ where: { name: { [Op.like]: '%' + searchInput + '%'}}});
 //     res.render('search', {});
 // });
-
-
-//in the get request, pass user search variable to the route with :whatever-search, then take as req.param.value and pass to sequelize to query products table
 
 
 module.exports = router;

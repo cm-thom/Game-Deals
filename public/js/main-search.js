@@ -4,7 +4,6 @@
     
  async function submitSearch() {
     let userSearchInput = document.querySelector('#search-navbar').value.trim();
-    console.log(userSearchInput);
 
      if (userSearchInput) {
          await fetch(`/search/${userSearchInput}`)
@@ -18,6 +17,5 @@
 searchButtonEl = document.getElementById('search-button');
 
 searchButtonEl.addEventListener('click', () => {
-    console.log('submit button works!')
     submitSearch();
 });
