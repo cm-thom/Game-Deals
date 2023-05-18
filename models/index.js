@@ -12,6 +12,7 @@ Products.belongsTo(User, {
 
 //put associations here once approved
 
+
 //User.hasMany(Products, {
   //  foreignKey: "user_id"
 //});
@@ -19,7 +20,6 @@ Products.belongsTo(User, {
 //Products.belongsTo(User, {
  //  foreignKey: 'user_id'
 //});
-
 
 
 
