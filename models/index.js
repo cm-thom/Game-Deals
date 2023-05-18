@@ -32,4 +32,4 @@ Products.belongsTo(User, {
 
 
 //don't forget to export associations
-//module.exports = {  Products };
+module.exports = {  Products };
