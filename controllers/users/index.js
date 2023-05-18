@@ -2,10 +2,14 @@ const router = require("express").Router();
 const { User } = require('../../models');
 
 
-router.get('/', (req, res) => {
+
+router.get('/signup', (req, res) => {
     res.render('signup', {});
 })
 
+router.get('/', (req, res) => {
+    res.render('login', {});
+})
 
 // Create a new user
 router.post("/signup", async (req, res) => {
@@ -19,6 +23,7 @@ router.post("/signup", async (req, res) => {
     
         req.session.save(() => {
           req.session.user_id = userData.id;
+          req.session.username = userData.username;
           req.session.logged_in = true;
     
           res.status(200).json(userData);
@@ -46,7 +51,8 @@ router.post('/login', async (req,res) => {
         }
 
         req.session.save(() => {
-            res.session.user_id - userData.id;
+            req.session.user_id = userData.id;
+            req.session.username = userData.username;
             req.session.logged_in = true;
 
             res.json({ user: userData, message: 'You are logged in!' });
