@@ -7,7 +7,7 @@ const consoleType = document.querySelector('.consoleType').value
 const productDescription = document.querySelector('.post-Description').value
 const productViews = document.querySelector('.productViews').value
 const productGenre = document.querySelector('.productGenre').value
-const productAvailble = document.querySelector('.Avalible').value
+const productAvalible = document.querySelector('.Avalible').value
 
 
 
@@ -22,7 +22,7 @@ const newProduct =  fetch(`/products/new-product`, {
          productDescription,
          productViews,
          productGenre,
-        productAvailble
+        productAvalible
     }),
     headers: {
       'Content-Type': 'application/json',
