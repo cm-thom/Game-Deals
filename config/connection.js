@@ -14,7 +14,7 @@ if(process.env.JAWSDB_URL) {
         process.env.DB_PASSWORD,
          
 
-        process.env.DB_PASSWORD, 
+
 
         {
             host: '127.0.0.1',

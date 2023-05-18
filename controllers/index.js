@@ -8,11 +8,6 @@ const products = require('./products')
 const users = require('./users');
 
 
-
-const products = require('./products')
-const users = require('./users');
-
-
 //do not need to include . when adding folder routes
 router.use("/search", search);
 
