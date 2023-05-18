@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const Products = require ('../../models/Products');
+const {Products} = require ('../../models');
 
-//localhost/3001
+//localhost/3001/products/new-products
+
 
 
 
