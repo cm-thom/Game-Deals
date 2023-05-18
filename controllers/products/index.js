@@ -19,7 +19,7 @@ router.post('/new-product',  (req,res) => {
         description: req.body.productDescription,
         viewCount: req.body.productViews,
         genre: req.body.productGenre,
-        available: req.body.productAvalible
+        available: req.body.productAvailble
     }) 
         
 .then((newProduct) => {
