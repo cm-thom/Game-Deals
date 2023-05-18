@@ -11,13 +11,14 @@ Products.belongsTo(User, {
 })
 
 //put associations here once approved
-User.hasMany(Products, {
-    foreignKey: 'user_id'
-});
+//User.hasMany(Products, {
+  //  foreignKey: "user_id"
+//});
 
-Products.belongsTo(User, {
-    foreignKey: 'user_id'
-});
+//Products.belongsTo(User, {
+ //  foreignKey: 'user_id'
+//});
+
 
 
 //User.hasMany(Products, {
@@ -31,4 +32,4 @@ Products.belongsTo(User, {
 
 
 //don't forget to export associations
-module.exports = { User, Products };
+//module.exports = {  Products };
