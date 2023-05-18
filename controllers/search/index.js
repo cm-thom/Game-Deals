@@ -26,6 +26,8 @@ router.get('/:userQuery', async (req, res) => {
       console.log(error);
       res.status(500).json({ msg: 'Internal server error' });
     }
+
+    //res.render('search', {});
   });
 
 
