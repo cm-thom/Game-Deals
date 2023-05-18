@@ -31,7 +31,9 @@ const sess = {
 app.use(session(sess));
 
 //needed so express can find public (front-end) assets
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+//app.use(express.static('public'));
 
 //you don't need to include this if you don't have helper functions.
 const hbs = exphbs.create({});
