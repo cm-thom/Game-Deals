@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const {Products} = require ('../../models');
 
+router.get('/', (req,res) => {
+    res.render('products', {});
+});
+
 //localhost/
 router.post('/new-product', async (req,res) => {
 
