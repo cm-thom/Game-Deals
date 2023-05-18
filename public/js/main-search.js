@@ -3,21 +3,20 @@
 
     
  async function submitSearch() {
-    let userSearchInput = document.querySelector('#search-navbar').value.trim();
-    console.log(userSearchInput);
+    const userSearchInput = document.querySelector('#search-navbar').value.trim();
 
-     if (userSearchInput) {
-         await fetch(`/search/${userSearchInput}`)
-         .then(res => res.json())
-         .then(data => {
-            console.log(data);
-         })
-    }
+    //  if (userSearchInput) {
+    //      await fetch(`/search/${userSearchInput}`)
+    //      .then(res => res.json())
+    //      .then(data => {
+    //         console.log(data);
+    //      })
+    // }
+    window.location.replace('/search/' + userSearchInput);
 };
 
 searchButtonEl = document.getElementById('search-button');
 
 searchButtonEl.addEventListener('click', () => {
-    console.log('submit button works!')
     submitSearch();
 });
