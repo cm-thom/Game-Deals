@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {Products} = require ('../../models');
 
-//localhost/3001/products/new-products
+//localhost/g3001/products/new-products
 router.post('/new-product', async (req,res) => {
 
     const {name: productName,
