@@ -3,7 +3,7 @@
 
     
  async function submitSearch() {
-    let userSearchInput = document.querySelector('#search-navbar').value.trim();
+    const userSearchInput = document.querySelector('#search-navbar').value.trim();
 
      if (userSearchInput) {
          await fetch(`/search/${userSearchInput}`)
