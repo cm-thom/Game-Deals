@@ -20,7 +20,7 @@ router.get('/:userQuery', async (req, res) => {
       if (!products) {
 
       } else {
-        
+
       };
   
       const results = products.map((product) =>
