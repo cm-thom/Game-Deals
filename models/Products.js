@@ -33,7 +33,7 @@ Products.init({
         type: DataTypes.STRING,
     },
     available: {
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     user_id: {
