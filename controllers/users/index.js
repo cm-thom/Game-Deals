@@ -7,7 +7,7 @@ router.get('/signup', (req, res) => {
     res.render('signup', {});
 })
 
-router.get('/', (req, res) => {
+router.get('/login', (req, res) => {
     res.render('login', {});
 })
 
@@ -37,7 +37,7 @@ router.post("/signup", async (req, res) => {
 router.post('/login', async (req,res) => {
     try{
         const userData = await User.findOne({ where: { email: req.body.email} });
-
+        console.log(req.session);
         if (!userData) {
             res.status(400).json({ message: 'Incorrect email or password, please try again '});
             return;
