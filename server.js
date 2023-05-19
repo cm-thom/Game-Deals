@@ -2,33 +2,33 @@ const express = require('express');
 const path = require("path");
 const controllers = require('./controllers')
 const exphbs = require('express-handlebars');
-const session = require('express-session');
+//const session = require('express-session');
 
 
 const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+//exiconst SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 
-const sess = {
-    secret: 'Super secret games',
-    cookie: {
-        maxAge: 6000000,
-        httpOnly: true,
-        secure: false,
-        sameSite: 'strict',
-    },
-    resave: false,
-    saveUnitialized: true,
-    store: new SequelizeStore({
-        db: sequelize
-    })
-};
+// const sess = {
+//     secret: 'Super secret games',
+//     cookie: {
+//         maxAge: 6000000,
+//         httpOnly: true,
+//         secure: false,
+//         sameSite: 'strict',
+//     },
+//     resave: false,
+//     saveUnitialized: true,
+//     store: new SequelizeStore({
+//         db: sequelize
+//     })
+// };
 
-app.use(session(sess));
+//app.use(session(sess));
 
 //needed so express can find public (front-end) assets
 app.use(express.static(path.join(__dirname, 'public')));
